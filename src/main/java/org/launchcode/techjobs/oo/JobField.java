@@ -33,6 +33,7 @@ public abstract class JobField {
     public int hashCode() {
         return Objects.hash(id);
     }
+
     public int getId() {
         return id;
     }
