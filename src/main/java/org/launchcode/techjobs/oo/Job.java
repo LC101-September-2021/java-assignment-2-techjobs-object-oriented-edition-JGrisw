@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Job {
 
-    private int id;
+    private final int id;
     private static int nextId = 1;
 
     private String name;
@@ -22,8 +22,9 @@ public class Job {
         nextId++;
     }
 
-    public Job(String name, Employer aEmployer, Location aLocation, PositionType aPositionType,CoreCompetency aCoreCompetency){
+    public Job(String aName, Employer aEmployer, Location aLocation, PositionType aPositionType,CoreCompetency aCoreCompetency){
         this();
+        this.name = aName;
         this.employer = aEmployer;
         this.location = aLocation;
         this.positionType = aPositionType;
@@ -46,15 +47,43 @@ public class Job {
         return Objects.hash(id);
     }
 
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
+    @Override
+    public String toString() {
+        if(getName().equals("")){
+            setName("Data not available");
+        }
+        if(employer.getValue().equals("")){
+            employer.setValue("Data not available");
+        }
+        if(location.getValue().equals("")){
+            location.setValue("Data not available");
+        }
+        if(positionType.getValue().equals("")){
+            positionType.setValue("Data not available");
+        }
+        if(coreCompetency.getValue().equals("")){
+            coreCompetency.setValue("Data not available");
+        }
+
+        return "\n" +
+                "Id: " + id + '\n' +
+                "Name: " + name + '\n' +
+                "Employer: " + employer +'\n' +
+                "Location: " + location +'\n' +
+                "PositionType: " + positionType +'\n' +
+                "CoreCompetency: " + coreCompetency +'\n' +
+                '\n';
+    }
+
+// TODO: Add getters for each field EXCEPT nextId. Add setters for  each field EXCEPT nextID
+
 
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -62,9 +91,7 @@ public class Job {
         this.name = name;
     }
 
-    public Employer getEmployer() {
-        return employer;
-    }
+    public Employer getEmployer() {return employer;}
 
     public void setEmployer(Employer employer) {
         this.employer = employer;
@@ -94,3 +121,4 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 }
+
