@@ -19,6 +19,7 @@ public class TestTaskFive extends AbstractTest {
 
     @Test
     public void testTestToStringStartsAndEndsWithNewLineExists () throws ClassNotFoundException {
+        //passed
         Class jobTestClass = getClassByName("test.JobTest");
         Method testToStringStartsAndEndsWithNewLineMethod = null;
 
@@ -31,6 +32,7 @@ public class TestTaskFive extends AbstractTest {
 
     @Test
     public void testTestToStringStartsAndEndsWithNewLineCallsToString (@Mocked Job job) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        //passed
         Class jobTestClass = getClassByName("test.JobTest");
         JobTest jobTest = (JobTest) jobTestClass.getConstructor().newInstance();
         Method testToStringStartsAndEndsWithNewLineMethod = jobTestClass.getMethod("testToStringStartsAndEndsWithNewLine");
@@ -61,6 +63,7 @@ public class TestTaskFive extends AbstractTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        //passed
         Job job = createJob("Web Developer", "LaunchCode", "StL", "Back-end developer", "Java");
         char firstChar = job.toString().charAt(0);
         char lastChar = job.toString().charAt(job.toString().length()-1);
@@ -70,6 +73,7 @@ public class TestTaskFive extends AbstractTest {
 
     @Test
     public void testTestToStringContainsCorrectLabelsAndDataExists () throws ClassNotFoundException {
+        //passed
         Class jobTestClass = getClassByName("test.JobTest");
         Method testToStringContainsCorrectLabelsAndDataMethod = null;
 

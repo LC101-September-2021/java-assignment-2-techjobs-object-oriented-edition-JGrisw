@@ -18,7 +18,7 @@ public class Job {
     //  the 'id' field.
 
     public Job(){
-        id = nextId;
+        this.id = nextId;
         nextId++;
     }
 
@@ -65,18 +65,16 @@ public class Job {
             coreCompetency.setValue("Data not available");
         }
         return "\n" +
-                "Id: " + id + '\n' +
+                "ID: " + id + '\n' +
                 "Name: " + name + '\n' +
                 "Employer: " + employer +'\n' +
                 "Location: " + location +'\n' +
-                "PositionType: " + positionType +'\n' +
-                "CoreCompetency: " + coreCompetency +'\n' +
-                '\n';
+                "Position Type: " + positionType +'\n' +
+                "Core Competency: " + coreCompetency +'\n' +
+                "\n";
     }
 
 // TODO: Add getters for each field EXCEPT nextId. Add setters for  each field EXCEPT nextID
-
-
 
     public int getId() {
         return id;

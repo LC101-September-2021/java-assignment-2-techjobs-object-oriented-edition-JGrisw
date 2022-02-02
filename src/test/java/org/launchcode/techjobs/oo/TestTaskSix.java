@@ -9,7 +9,7 @@ import static org.junit.Assert.fail;
  * Created by LaunchCode
  */
 public class TestTaskSix extends AbstractTest {
-
+        //all Passed!
     @Test
     public void testJobFieldClassExists() {
         try {

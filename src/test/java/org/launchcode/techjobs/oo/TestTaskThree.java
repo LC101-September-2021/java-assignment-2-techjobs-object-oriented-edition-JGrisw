@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * Created by LaunchCode
  */
 public class TestTaskThree extends AbstractTest {
-
+        //all passed
     @Test
     public void testHasNoArgConstructor() throws ClassNotFoundException {
         Class jobClass = getClassByName("Job");
