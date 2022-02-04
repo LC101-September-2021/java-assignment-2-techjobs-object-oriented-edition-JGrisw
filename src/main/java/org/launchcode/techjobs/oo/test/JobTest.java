@@ -50,20 +50,22 @@ public class JobTest {
 
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
+        Job test_Job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistance"));
         String expected = "\n" +
-                "ID: " + job.getId() + '\n' +
-                "Name: " + job.getName() +'\n' +
-                "Employer: " + job.getEmployer() +'\n' +
-                "Location: " + job.getLocation() +'\n' +
-                "Position Type: " + job.getPositionType() +'\n' +
-                "Core Competency: " + job.getCoreCompetency() +'\n' +
-                '\n';
+                "ID: " + test_Job2.getId() + '\n' +
+                "Name: " + test_Job2.getName() +'\n' +
+                "Employer: " + test_Job2.getEmployer() +'\n' +
+                "Location: " + test_Job2.getLocation() +'\n' +
+                "Position Type: " + test_Job2.getPositionType() +'\n' +
+                "Core Competency: " + test_Job2.getCoreCompetency() +'\n';
+        String actual = test_Job2.toString();
+        assertEquals(expected,actual);
 
-        assertEquals(job.toString(), expected);
+
     }
 
     @Test
-    public void testToStringHandlesEmptyFieldCallsAssertions(){
+    public void testToStringHandlesEmptyField(){
         Job test_Job2 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType(""), new CoreCompetency("Persistence"));
         String expected = '\n' +
                 "ID: " + test_Job2.getId() + '\n' +
@@ -71,8 +73,8 @@ public class JobTest {
                 "Employer: " + "Data not available" +'\n' +
                 "Location: " + "Desert" +'\n' +
                 "Position Type: " + "Data not available" +'\n' +
-                "Core Competency: " + "Persistence" +'\n' +
-                '\n';
+                "Core Competency: " + "Persistence" +'\n';
+
 
         assertEquals(expected, test_Job2.toString());
     }
@@ -87,12 +89,12 @@ public class JobTest {
                 "Position Type: " + "Data not available" +'\n' +
                 "Core Competency: " + "Persistence" +'\n' +
                 '\n';
-        Boolean beginning_Test = expected.startsWith("\n");
-        Boolean ending_Test = expected.endsWith("\n");
-        assertTrue(test_Job2.toString().startsWith("\n"));
-        assertTrue(test_Job2.toString().endsWith("\n"));
-        assertEquals(test_Job2.toString().startsWith("\n"), beginning_Test);
-        assertEquals(test_Job2.toString().endsWith("\n"), ending_Test);
+//        Boolean beginning_Test = expected.startsWith("\n");
+//        Boolean ending_Test = expected.endsWith("\n");
+        assertEquals(true, test_Job2.toString().startsWith("\n"));
+        assertEquals(true,test_Job2.toString().endsWith("\n"));
+//        assertEquals(test_Job2.toString().startsWith("\n"), beginning_Test);
+//        assertEquals(test_Job2.toString().endsWith("\n"), ending_Test);
         assertEquals('\n', '\n');
         assertEquals('\n', '\n');
 

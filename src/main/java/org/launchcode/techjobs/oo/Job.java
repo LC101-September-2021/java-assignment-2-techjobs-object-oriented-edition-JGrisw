@@ -70,8 +70,8 @@ public class Job {
                 "Employer: " + employer +'\n' +
                 "Location: " + location +'\n' +
                 "Position Type: " + positionType +'\n' +
-                "Core Competency: " + coreCompetency +'\n' +
-                "\n";
+                "Core Competency: " + coreCompetency +'\n';
+
     }
 
 // TODO: Add getters for each field EXCEPT nextId. Add setters for  each field EXCEPT nextID
