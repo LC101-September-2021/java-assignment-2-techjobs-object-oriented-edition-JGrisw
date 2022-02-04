@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * Created by LaunchCode
  */
 public class TestTaskTwo extends AbstractTest {
-
+        //all passed
     @Test
     public void testSecondLocationConstructorExists() throws ClassNotFoundException {
 

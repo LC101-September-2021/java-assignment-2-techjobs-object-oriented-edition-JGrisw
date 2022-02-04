@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
  * Created by LaunchCode
  */
 public class TestTaskFour extends AbstractTest {
-
+        //all passed
     @Tested
     JobTest jobTest;
 
